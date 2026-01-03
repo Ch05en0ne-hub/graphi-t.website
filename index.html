@@ -1,0 +1,139 @@
+cat > index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graffiT - Urban Fashion</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">graffiT</div>
+            <ul class="nav-menu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#shop">SHOP</a></li>
+                <li><a href="#collections">COLLECTIONS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#blog">BLOG</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <div class="nav-icons">
+                <input type="text" class="search-bar" placeholder="Search...">
+                <button class="cart-btn">🛒 CART</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">graffiT</h1>
+            <p class="hero-subtitle">URBAN STYLE. STREET ART. BOLD FASHION.</p>
+            <button class="cta-btn">SHOP NOW</button>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="featured-section">
+        <h2 class="section-title">FEATURED COLLECTIONS</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/product1.jpg" alt="Graffiti T-Shirt">
+                </div>
+                <h3 class="product-name">Graffiti T-Shirt</h3>
+                <p class="product-price">$32.00</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/product2.jpg" alt="Urban Tag Tee">
+                </div>
+                <h3 class="product-name">Urban Tag Tee</h3>
+                <p class="product-price">$30.00</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/product3.jpg" alt="Street Art Shirt">
+                </div>
+                <h3 class="product-name">Street Art Shirt</h3>
+                <p class="product-price">$28.00</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/product4.jpg" alt="Chrome Tag Tee">
+                </div>
+                <h3 class="product-name">Chrome Tag Tee</h3>
+                <p class="product-price">$35.00</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="new-arrivals">
+        <h2 class="section-title">NEW ARRIVALS</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/new1.jpg" alt="Fresh Drop">
+                </div>
+                <h3 class="product-name">Fresh Drop Tee</h3>
+                <p class="product-price">$33.00</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/new2.jpg" alt="Spray Paint">
+                </div>
+                <h3 class="product-name">Spray Paint Shirt</h3>
+                <p class="product-price">$31.00</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ABOUT graffiT</h3>
+                <p>Urban fashion inspired by street art culture.</p>
+            </div>
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>FOLLOW US</h3>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 graffiT. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+EOF

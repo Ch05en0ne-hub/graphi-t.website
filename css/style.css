@@ -1,0 +1,404 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #8B3DFF;
+    --purple-dark: #6B1FDF;
+    --orange: #FF6B35;
+    --orange-dark: #FF4500;
+    --black: #0D0D0D;
+    --chrome: linear-gradient(145deg, #E8E8E8, #FFFFFF, #D0D0D0);
+    --pearlescent: linear-gradient(120deg, #8B3DFF 0%, #FF6B35 50%, #8B3DFF 100%);
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    background-color: var(--black);
+    color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(139, 61, 255, 0.3);
+    border-bottom: 3px solid var(--purple);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Black Ops One', cursive;
+    font-size: 2.5rem;
+    background: var(--pearlescent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(139, 61, 255, 0.5);
+    letter-spacing: 3px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--orange);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.nav-menu a:hover {
+    color: var(--orange);
+    text-shadow: 0 0 15px var(--orange);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 0.7rem 1.5rem;
+    border: 2px solid var(--purple);
+    border-radius: 25px;
+    background: rgba(139, 61, 255, 0.1);
+    color: #FFFFFF;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+    background: rgba(139, 61, 255, 0.2);
+    box-shadow: 0 0 20px rgba(139, 61, 255, 0.5);
+}
+
+.cart-btn {
+    padding: 0.7rem 1.5rem;
+    background: var(--orange);
+    border: none;
+    border-radius: 25px;
+    color: var(--black);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.cart-btn:hover {
+    background: var(--orange-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 107, 53, 0.6);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: var(--orange);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: linear-gradient(135deg, #1a0033 0%, #330066 50%, #1a0033 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(139, 61, 255, 0.1) 10px, rgba(139, 61, 255, 0.1) 20px),
+        repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255, 107, 53, 0.1) 10px, rgba(255, 107, 53, 0.1) 20px);
+    animation: graffiti-bg 20s linear infinite;
+}
+
+@keyframes graffiti-bg {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-title {
+    font-family: 'Black Ops One', cursive;
+    font-size: 8rem;
+    background: var(--pearlescent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 50px rgba(139, 61, 255, 0.8);
+    letter-spacing: 10px;
+    margin-bottom: 1rem;
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% { filter: drop-shadow(0 0 20px rgba(139, 61, 255, 0.8)); }
+    50% { filter: drop-shadow(0 0 40px rgba(255, 107, 53, 0.8)); }
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    color: var(--orange);
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.6);
+}
+
+.cta-btn {
+    padding: 1.2rem 3rem;
+    background: var(--purple);
+    border: 3px solid var(--orange);
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 30px rgba(139, 61, 255, 0.6);
+}
+
+.cta-btn:hover {
+    background: var(--orange);
+    border-color: var(--purple);
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgba(255, 107, 53, 0.8);
+}
+
+/* Sections */
+.featured-section, .new-arrivals {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Black Ops One', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--orange);
+    letter-spacing: 5px;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    border: 2px solid var(--purple);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--orange);
+    box-shadow: 0 15px 40px rgba(139, 61, 255, 0.4);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #330066, #660099);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.8rem;
+    color: var(--orange);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 1rem;
+    background: var(--purple);
+    border: 2px solid var(--orange);
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: var(--orange);
+    border-color: var(--purple);
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
+    padding: 3rem 2rem 1rem;
+    border-top: 3px solid var(--purple);
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-family: 'Black Ops One', cursive;
+    color: var(--orange);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a:hover {
+    color: var(--orange);
+    padding-left: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(139, 61, 255, 0.3);
+    color: #888;
+    letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
