@@ -4,21 +4,21 @@
   "description": "A vibrant, graffiti-inspired clothing website featuring bold street art aesthetics.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ch05en0ne-hub/graphi-t.website.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["graffiti", "fashion", "ecommerce", "streetwear"],
+  "author": "graphi-t",
   "license": "ISC",
-  "type": "commonjs",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.3"
+  },
   "bugs": {
     "url": "https://github.com/Ch05en0ne-hub/graphi-t.website/issues"
   },
-  "homepage": "https://github.com/Ch05en0ne-hub/graphi-t.website#readme",
-  "dependencies": {
-    "@supabase/supabase-js": "^2.89.0"
-  }
+  "homepage": "https://github.com/Ch05en0ne-hub/graphi-t.website#readme"
 }
