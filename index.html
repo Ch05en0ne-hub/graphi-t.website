@@ -1,4 +1,3 @@
-cat > index.html << 'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,38 +47,7 @@ cat > index.html << 'EOF'
     <section class="featured-section">
         <h2 class="section-title">FEATURED COLLECTIONS</h2>
         <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/product1.jpg" alt="Graffiti T-Shirt">
-                </div>
-                <h3 class="product-name">Graffiti T-Shirt</h3>
-                <p class="product-price">$32.00</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/product2.jpg" alt="Urban Tag Tee">
-                </div>
-                <h3 class="product-name">Urban Tag Tee</h3>
-                <p class="product-price">$30.00</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/product3.jpg" alt="Street Art Shirt">
-                </div>
-                <h3 class="product-name">Street Art Shirt</h3>
-                <p class="product-price">$28.00</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/product4.jpg" alt="Chrome Tag Tee">
-                </div>
-                <h3 class="product-name">Chrome Tag Tee</h3>
-                <p class="product-price">$35.00</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
+            <!-- Products will be loaded here by JavaScript -->
         </div>
     </section>
 
@@ -87,22 +55,7 @@ cat > index.html << 'EOF'
     <section class="new-arrivals">
         <h2 class="section-title">NEW ARRIVALS</h2>
         <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/new1.jpg" alt="Fresh Drop">
-                </div>
-                <h3 class="product-name">Fresh Drop Tee</h3>
-                <p class="product-price">$33.00</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/new2.jpg" alt="Spray Paint">
-                </div>
-                <h3 class="product-name">Spray Paint Shirt</h3>
-                <p class="product-price">$31.00</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
+            <!-- Products will be loaded here by JavaScript -->
         </div>
     </section>
 
@@ -117,7 +70,7 @@ cat > index.html << 'EOF'
                 <h3>QUICK LINKS</h3>
                 <ul>
                     <li><a href="#shop">Shop</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#</li>                    <li><a href="#about">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -133,7 +86,6 @@ cat > index.html << 'EOF'
         <p class="copyright">&copy; 2025 graffiT. All Rights Reserved.</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
-EOF
